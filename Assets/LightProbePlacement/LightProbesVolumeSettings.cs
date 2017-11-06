@@ -45,6 +45,7 @@ public class LightProbesVolumeSettings : MonoBehaviour
         gameObject.GetComponent<BoxCollider>().enabled = false;
 
         //Store bounds
+        
         float minX = bbox.min.x;
         float minY = bbox.min.y;
         float minZ = bbox.min.z;
@@ -71,12 +72,17 @@ public class LightProbesVolumeSettings : MonoBehaviour
         {
             for (int x = 0; x < xCount; x++)
             {
-                RaycastHit hit;
+                //RaycastHit hit;
+                RaycastHit[] hits;
                 Ray ray = new Ray();
                 ray.origin = new Vector3(startxoffset + minX + x * horizontalSpacing, maxY + 1, startzoffset + minZ + z * horizontalSpacing);
                 ray.direction = -Vector3.up;
-                if (Physics.Raycast(ray, out hit, (maxY - minY) * 2,-1,QueryTriggerInteraction.Ignore))
+                //if (Physics.Raycast(ray, out hit, (maxY - minY) * 2,-1,QueryTriggerInteraction.Ignore))
+                hits = Physics.RaycastAll(ray, (maxY - minY) * 2, -1, QueryTriggerInteraction.Ignore);
+                foreach(var hit in hits)
                 {
+                    if (!hit.collider.gameObject.isStatic)
+                        break;
                     if (hit.point.y + OffsetFomFloor < maxY && hit.point.y + OffsetFomFloor > minY)
                         VertPositions.Add(hit.point + new Vector3(0, OffsetFomFloor, 0));
                     if(drawDebug)
@@ -141,7 +147,7 @@ public class LightProbesVolumeSettings : MonoBehaviour
         Vector3[] ProbePos = new Vector3[validVertPositions.Count];
         for (int i = 0; i < validVertPositions.Count; i++)
         {
-            ProbePos[i] = validVertPositions[i]- gameObject.transform.position;
+            ProbePos[i] = gameObject.transform.InverseTransformPoint(validVertPositions[i]); 
         }
 
         // Set new light probes
