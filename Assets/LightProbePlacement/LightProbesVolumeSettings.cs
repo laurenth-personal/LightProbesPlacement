@@ -29,7 +29,7 @@ public class LightProbesVolumeSettings : MonoBehaviour
     {
         //avoid division by 0
         horizontalSpacing = Mathf.Max(horizontalSpacing, 0.01f);
-        verticalSpacing = Mathf.Max(horizontalSpacing, 0.01f);
+        verticalSpacing = Mathf.Max(verticalSpacing , 0.01f);
 
         Collider col = gameObject.GetComponent<Collider>();
         if (col == null) Debug.Log("Col not found", col);
