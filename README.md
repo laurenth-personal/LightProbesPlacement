@@ -11,6 +11,10 @@ By default it will add 2 layers of probes above the detected meshes, or you can 
 
 This script will add a "Lighting" menu in Unity.
 
+# New :
+	- volumes hold their respective settings, the menu item just refreshes the lightprobe placement for all the volumes
+	- the script will only place lightprobes above static objects, if the script doesn't place any lightprobes, make sure your environment colliders are flagged as static
+
 # How to use it :
 
 
@@ -21,8 +25,8 @@ This script will add a "Lighting" menu in Unity.
     - offset from floor is at which vertical distance from the collision you want to spawn the first layer of probes
     - number of layers is the number of probes that will be placed vertically above the hit collider
     - fill volume enabled will fill the whole height of the volume instead of just doing X number of layer
-     - discard inside geometry will test if your probe is inside an object with collisions. This will only work if the top face of your volume is not itself inside an object with collisions.
-- Click the button !
+    - discard inside geometry will test if your probe is inside an object with collisions. This will only work if the top face of your volume is not itself inside an object with collisions.
+	- Click the button !
 
 - When you have several volumes setup in your scene and you want to refresh them all :
     - Go to lighting / Refresh lightprobes volumes. This will place again the probes in all your volumes in the scene.
