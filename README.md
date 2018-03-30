@@ -12,8 +12,8 @@ By default it will add 2 layers of probes above the detected meshes, or you can 
 This script will add a "Lighting" menu in Unity.
 
 # New :
-	- volumes hold their respective settings, the menu item just refreshes the lightprobe placement for all the volumes
-	- the script will only place lightprobes above static objects, if the script doesn't place any lightprobes, make sure your environment colliders are flagged as static
+- volumes hold their respective settings, the menu item just refreshes the lightprobe placement for all the volumes
+- the script will only place lightprobes above static objects, if the script doesn't place any lightprobes, make sure your environment colliders are flagged as static
 
 # How to use it :
 
