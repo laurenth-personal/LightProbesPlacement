@@ -10,6 +10,7 @@ This script will add a "Lighting" menu in Unity.
 
 # New :
 
+- now requires 2018.1 or above
 - the scripts are now inside a package. This package is a submodule of this repository, make sure you either update submodule or download is separately [here](https://github.com/laurenth-unity/LightingTools.LightProbesVolumes)
 - the light probe placement now works correctly with rotated volumes
 - the "follow floor" finally does something : when checked the placement uses raycast against static objects, when disabled it just follows the volume
