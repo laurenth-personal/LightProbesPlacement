@@ -1,0 +1,3 @@
+[submodule "LocalPackages/LightingTools.LightProbesVolumes"]
+	path = LocalPackages/LightingTools.LightProbesVolumes
+	url = https://github.com/laurenth-unity/LightingTools.LightProbesVolumes.git
