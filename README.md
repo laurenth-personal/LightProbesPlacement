@@ -5,15 +5,15 @@ Script to accelerate lightprobes placement in Unity ( tested in 2017.2 )
 
 Based on script shared by ghostmantis games : http://ghostmantis.com/?p=332
 
-This script allows you to place Lightproves automatically inside a volume, above geometry with collisions.
-If you have a floor with collisions, it will detect it and place lightprobes above it on a grid with a resolution you can choose.
-By default it will add 2 layers of probes above the detected meshes, or you can fill the volume completely.
+This script allows you to place Lightprobes automatically inside a volume, above static geometry with collisions.
+If you have a static floor and objects with collisions, it will detect them and place lightprobes above them on a grid with a resolution you can choose.
+By default it will add 2 layers of probes above the detected meshes, or you can choose to fill the volume completely.
 
 This script will add a "Lighting" menu in Unity.
 
 # New :
-	- volumes hold their respective settings, the menu item just refreshes the lightprobe placement for all the volumes
-	- the script will only place lightprobes above static objects, if the script doesn't place any lightprobes, make sure your environment colliders are flagged as static
+- volumes hold their respective settings, the menu item just refreshes the lightprobe placement for all the volumes
+- the script will only place lightprobes above static objects, if the script doesn't place any lightprobes, make sure your environment colliders are flagged as static
 
 # How to use it :
 
@@ -33,5 +33,8 @@ This script will add a "Lighting" menu in Unity.
 
 # Improvements I would like to do :
 
-- when detecting a collision only spawn lightprobes above static meshes (lightmap static ?)
 - if you have volumes with high resolution LP grid inside volumes with smaller resolution LP grid, remove the low resolution grid probes before generating the high res grid.
+
+# Troubleshoot :
+
+- if the script doesn't place any lightprobe, make sure your geometric is marked as static, and that it has a collider. Using colliders isn't ideal but I haven't found a good solution that would work without them.
