@@ -6,7 +6,7 @@ The [LightProbesVolumes](https://github.com/laurenth-unity/LightingTools.LightPr
 If you have a static floor and objects with collisions, it will detect them and place lightprobes above them on a grid with a resolution you can choose.
 By default it will add 2 layers of probes above the detected meshes, or you can choose to fill the volume completely.
 
-This script will add a "Lighting" menu in Unity.
+This script will add a "Lighting" menu in Unity and a LightProbesVolume item in the Gameobject / Light menu.
 
 # New :
 
