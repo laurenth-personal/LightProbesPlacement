@@ -4,4 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Lightprobes.unity
+    guid: 43f51ccd76ec8dc48b5777d30e8b54f3
+  m_configObjects: {}

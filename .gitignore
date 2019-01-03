@@ -1,0 +1,8 @@
+Library/
+.vs/
+obj/
+Temp/
+LightingTools.LightProbesVolumes.Editor.csproj
+Assembly-CSharp.csproj
+LightProbesPlacement.sln
+LightingTools.LightProbesVolumes.csproj
